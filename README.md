@@ -134,6 +134,37 @@ The `.MF` files contain
 - SSG and OPN instruments 
 - MsDrv v4 files for OPN, OPNA and SC-55 MIDI
 
+## sierra-restool
+
+This tool extracts and creates Sierra resource/volume archives. It can also regenerate the archive index (hashmap) file.
+
+The format is documented here: [TIM Resource Format (ModdingWiki)](https://moddingwiki.shikadi.net/wiki/TIM_Resource_Format)
+The tool was made based on my own research though.
+
+So far, the tool was confirmed to work with the following games:
+
+- The Adventures of Willy Beamish (archives: `VOLUME.00#`, index: `VOLUME.RMF`)
+- The Incredible Machine (archives: `RESOURCE.00#`, index: `RESOURCE.MAP`)
+
+Example for extracting "The Incredible Machine" archives:
+
+```bash
+sierra-restool -x "RESOURCE.001" "unpack_001"
+sierra-restool -x "RESOURCE.002" "unpack_002"
+sierra-restool -x "RESOURCE.003" "unpack_003"
+sierra-restool -x "RESOURCE.004" "unpack_004"
+```
+
+Example for repacking "The Incredible Machine" archives:
+
+```bash
+sierra-restool -c "RESOURCE.001" "unpack_001/_fileLst.txt"
+sierra-restool -c "RESOURCE.002" "unpack_002/_fileLst.txt"
+sierra-restool -c "RESOURCE.003" "unpack_003/_fileLst.txt"
+sierra-restool -c "RESOURCE.004" "unpack_004/_fileLst.txt"
+sierra-restool -m "RESOURCE.MAP" "RESOURCE.001" "RESOURCE.002" "RESOURCE.003" "RESOURCE.004"
+```
+
 ## wolfteam\_dec
 
 This tool decompresses archives used in games developed by Wolf Team.

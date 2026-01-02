@@ -53,6 +53,9 @@ install(TARGETS piyo_dec RUNTIME DESTINATION "bin")
 add_executable(rekiai_dec rekiai_dec.c)
 install(TARGETS rekiai_dec RUNTIME DESTINATION "bin")
 
+add_executable(sierra-restool sierra-restool.c)
+install(TARGETS sierra-restool RUNTIME DESTINATION "bin")
+
 add_executable(wolfteam_dec wolfteam_dec.c)
 install(TARGETS wolfteam_dec RUNTIME DESTINATION "bin")
 
