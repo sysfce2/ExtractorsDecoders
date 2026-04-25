@@ -42,6 +42,14 @@ There are two known variants of the `WLK` format:
 - v1 has no magic bytes at the beginning
 - v2 begins with "WLKF0200" and can optionally store the original file names and paths. "Comet Summoner" is one of the games that includes original file paths.
 
+## dafa\_dec
+
+This tool removes the encryption of `DUNGEON.EXE` from the PC-98 game "Dragoon Armor For Adult".
+
+I wrote this tool to help BabaJeanmel with a translation of the game.
+
+The encryption is done by XORing each byte in the original EXE file with a pseudo-random key.
+
 ## danbidec
 
 This tool decrypts music files used by the Korean game developer "Danbi System".

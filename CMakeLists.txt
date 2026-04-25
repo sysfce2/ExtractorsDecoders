@@ -20,6 +20,9 @@ install(TARGETS CompileMLKTool RUNTIME DESTINATION "bin")
 add_executable(CompileWLKTool CompileWLKTool.c)
 install(TARGETS CompileWLKTool RUNTIME DESTINATION "bin")
 
+add_executable(dafa_dec dafa_dec.c)
+install(TARGETS dafa_dec RUNTIME DESTINATION "bin")
+
 add_executable(danbidec danbidec.c)
 install(TARGETS danbidec RUNTIME DESTINATION "bin")
 
