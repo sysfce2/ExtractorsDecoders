@@ -14,6 +14,9 @@ endif(CMAKE_COMPILER_IS_GNUCC)
 add_library(lzss-lib STATIC lzss-lib.c)
 
 
+add_executable(adv98_dec adv98_dec.c)
+install(TARGETS adv98_dec RUNTIME DESTINATION "bin")
+
 add_executable(CompileMLKTool CompileMLKTool.c)
 install(TARGETS CompileMLKTool RUNTIME DESTINATION "bin")
 

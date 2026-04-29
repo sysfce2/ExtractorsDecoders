@@ -15,6 +15,17 @@ The general compilation process is:
   - `cmake ..`
   - `cmake --build . --config Release`
 
+## adv98\_dec
+
+This is a tool for decrypting executables from games by Ides. (`ADV98.OVL`, `ADVBIOS.OVL`, possibly other files)
+
+The encryption is easily identifyable by the string `TC0` within the last 80 bytes of an EXE file.
+It uses an XOR encryption with a pseudo-random key.  
+
+Most executables are encrypted 3 (!) times. The tool will remove all encryption iterations with one call.
+
+The source code contains comments about the file structure of encrypted executables.
+
 ## CompileMLKTool
 
 This tool extracts and creates `MLK` music archives used by various games developed by the Japanese game developer "Compile".
